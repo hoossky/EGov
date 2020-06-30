@@ -1,8 +1,10 @@
-var user = user|| {}
+var user = user || {}
 user = (function(){
 	let _
 	let init = function(){
-		 _ = sessionStorage.getItem('context')
+		 _ = sessionStorage.getItem('context'),
+		 javascript = sessionStorage.getItem('javascript'),
+		 session = sessionStorage.getItem('session')
 	}
 	let join = function(payload){
 		$.ajax({

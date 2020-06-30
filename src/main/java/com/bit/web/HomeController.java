@@ -20,9 +20,12 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@GetMapping("/")
-	public String home(HttpSession session, HttpServletRequest request) {		
+	public String home(HttpSession session, HttpServletRequest request) {
+		
 		session.setAttribute("context", request.getContextPath());
-		session.setAttribute("javascript", request.getContextPath()+"/resources/js");			
+		session.setAttribute("javascript", request.getContextPath()+"/resources/js");
+		/*session.setAttribute("css", request.getContextPath()+"/resources/css");
+		session.setAttribute("image", request.getContextPath()+"/resources/image");*/
 		return "main/Home.tiles";
 	}
 	@GetMapping("/location/{dir}/{page}")

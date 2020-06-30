@@ -17,7 +17,7 @@
 </form>
 <script src="${js}/store/user.js"></script>
 <script>
-document.getElementById('signup_btn').addEventListener('click',function(e){
+document.getElementById('signup_btn').addEventListener('click', function(e){
 	e.preventDefault()
 	user.init()
 	user.join({"userid": document.getElementById('userid').value,
