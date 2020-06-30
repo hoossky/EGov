@@ -6,18 +6,18 @@
     <p>Please fill in this form to create an account.</p>
     <hr>
     <label for="email"><b>userId</b></label>
-    <input type="text" placeholder="Enter USERID" name="userId" required>
+    <input type="text" id="userid" placeholder="Enter USERID" name="userid" required>
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input type="password" id="password" placeholder="Enter Password" name="password" required>
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
       <button id="signup_btn" type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>
 </form>
-<script src="${js}/store/user.js"></script>
+<script src="${javascript}/store/user.js"></script>
 <script>
-document.getElementById('signup_btn').addEventListener('click', function(e){
+document.getElementById('signup_btn').addEventListener('click',function(e){
 	e.preventDefault()
 	user.init()
 	user.join({"userid": document.getElementById('userid').value,

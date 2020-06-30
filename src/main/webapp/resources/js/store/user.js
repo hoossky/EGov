@@ -2,13 +2,11 @@ var user = user || {}
 user = (function(){
 	let _
 	let init = function(){
-		 _ = sessionStorage.getItem('context'),
-		 javascript = sessionStorage.getItem('javascript'),
-		 session = sessionStorage.getItem('session')
+		 _ = sessionStorage.getItem('context')		 
 	}
 	let join = function(payload){
 		$.ajax({
-			url : _+`/user`,
+			url : _+`/user/join`,
 			type: 'POST',
 			data: JSON.stringify(payload),
 			dataType: 'json',
