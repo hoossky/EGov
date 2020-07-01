@@ -8,7 +8,6 @@ package com.bit.web.domains;
  */
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
-
 import lombok.Data;
 
 
@@ -16,6 +15,6 @@ import lombok.Data;
 @Data
 @Component
 public class Article {
-	private int aseq, fseq;
+	private int articleNumber, fileNumber;
 	private String userid, comments, message, rating, borardType, title, content;
 }

@@ -10,11 +10,17 @@ public enum Sql {
 		String result = "";
 		switch(this) {
 		case CREATE_DB:
-			result = "create database ";
+			result = "create database mariadb";
 			break;
 			
 		case CREATE_USERS:
-			result = "CREATE DB";
+			result = "create table users(userid varchar(30)primary key,"+ 
+                    " password varchar(30) ," +
+                    " name varchar(30) ," +
+                    " birthday varchar(30) ," +
+                    " gender varchar(10) ," +
+                    " regdate varchar(10) ," +
+                    " telephone varchar(30))ENGINE=InnoDB DEFAULT CHARSET=UTF8" ;
 			break;
 			
 		case DROP_USERS:
@@ -22,34 +28,43 @@ public enum Sql {
 			break;
 			
 		case TRUNCATE_USERS:
-			result = "CREATE DB";
+			result = "truncate table users";
 			break;
 			
 		case CREATE_ARTICLES:
-			result = "CREATE DB";
-			break;
+			result =  "create table articles("
+	                   + "article_number int auto_increment primary key,"
+	                   + "file_number int  references files,"
+	                   + "userid varchar(30)  references users,"
+	                   + "comment varchar(500),"
+	                   + "message varchar(50),"
+	                   + "rating varchar(50), "
+	                   + "boardtype varchar(50),"
+	                   + "title varchar(300),"
+	                   + "content varchar(1000))ENGINE=InnoDB DEFAULT CHARSET=UTF8";
+				break;
 			
 		case DROP_ARTICLES:
 			result = "drop table articles";
 			break;
 			
 		case TRUNCATE_ARTICLES:
-			result = "CREATE DB";
+			result = "truncate table articles";
 			break;
 			
 		case CREATE_FIlES:
-			result = "create table files";/*(
-					"filesSeq int auto_increment primary key"+
-					"image varchar(30)" 
-					)";
-*/			break;
-			
+			 result =  "create table files("+
+	                   "file_number int auto_increment primary key"+
+	                   "file_name varchar(100)"+
+	                    ")ENGINE=InnoDB DEFAULT CHARSET=UTF8";
+				break;
+						
 		case DROP_FIlES:
-			result = "drop table images";
+			result = "drop table files";
 			break;
 			
 		case TRUNCATE_FIlES:
-			result = "CREATE DB";
+			result = "truncate table files";
 			break;
 			
 		}

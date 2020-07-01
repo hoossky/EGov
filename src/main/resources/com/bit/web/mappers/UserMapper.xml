@@ -5,10 +5,10 @@
   
 <mapper namespace="com.bit.web.mappers.UserMapper">
 <select id="truncateUser" parameterType="hashMap">
-	${TRUNACTE_USERS}
-</select>
-<select id="createDB" parameterType="hashMap">
-	${CREATE_DB}
-</select>
-
+  	${TRUNCATE_USERS}
+  </select>
+  <select id="createDB" parameterType="hashMap">
+  	${CREATE_DB}
+  </select>
+ 
 </mapper>

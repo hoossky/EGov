@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Component
 public class FileHandler {
-	private int imageSeq;
-	private String image;
+	private int fileNumber;
+	private String fileName;
 }

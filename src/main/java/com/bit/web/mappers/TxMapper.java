@@ -7,7 +7,8 @@ import com.bit.web.domains.User;
 
 @Repository
 public interface TxMapper {
-	@Insert("insert ")
-	public void insertUser(User makeUser);
+	@Insert("insert into users (userid, password) "
+			+ " values #{userid}, #{password}")
+	public void insertUser(User user);
 
 }
