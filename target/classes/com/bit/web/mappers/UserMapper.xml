@@ -4,5 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.bit.web.mappers.UserMapper">
+<select id="truncateUser" parameterType="hashMap">
+	${TRUNACTE_USERS}
+</select>
+<select id="createDB" parameterType="hashMap">
+	${CREATE_DB}
+</select>
 
 </mapper>

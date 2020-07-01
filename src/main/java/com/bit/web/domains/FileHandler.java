@@ -8,9 +8,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 @Lazy
 @Data
-@Component
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-	private String userid, password, name, birthday, gender, telephone, regdate, accessCode;
+@Component
+public class FileHandler {
+	private int imageSeq;
+	private String image;
 }
