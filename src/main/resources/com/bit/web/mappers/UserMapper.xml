@@ -10,5 +10,8 @@
   <select id="createDB" parameterType="hashMap">
   	${CREATE_DB}
   </select>
- 
+  <select id="selectByUseridAndPassword"
+  	resultType="com.bit.web.domains.User" 
+  	parameterType="com.bit.web.domains.User">  	
+  </select> 
 </mapper>

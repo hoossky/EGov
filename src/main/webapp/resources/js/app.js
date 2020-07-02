@@ -1,4 +1,5 @@
 "use strict"
+
 var app = app || {}
 app = (()=>{
 	return {init}

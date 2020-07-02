@@ -15,6 +15,7 @@ import com.bit.web.mappers.UserMapper;
 public class UserServiceImpl implements UserService {
 	private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 	@Autowired UserMapper userMapper;
+	@Autowired User user;
 
 	/* (non-Javadoc)
 	 * @see kr.co.bitcamp.services.PersonService#save()
@@ -68,8 +69,9 @@ public class UserServiceImpl implements UserService {
 	 * @see kr.co.bitcamp.services.PersonService#findByEmailAndUserId(java.lang.String, java.lang.String)
 	 */
 	@Override
-	public void findByEmailAndUserId(String email, String userId) {
-		// TODO Auto-generated method stub
+	public User findByUserIdAndPassword(User param) {
+
+		return userMapper.selectByUseridAndPassword(param);
 		
 	}
 	/* (non-Javadoc)

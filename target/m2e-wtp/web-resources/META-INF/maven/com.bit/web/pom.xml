@@ -21,6 +21,7 @@
 		<commons-el-version>1.0</commons-el-version>
 		<commons-fileupload-version>1.3.3</commons-fileupload-version>
 		<commons-io-version>2.6</commons-io-version>
+		<jstl-version>1.2</jstl-version>
 		<jackson-version>2.9.3</jackson-version>
 		<jaxb-impl-version>2.1</jaxb-impl-version>
 		<jackson-mapper-asl-version>1.9.13</jackson-mapper-asl-version>
@@ -120,7 +121,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
+			<version>${jstl-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-el</groupId>
@@ -215,6 +216,11 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
 		<!-- Root -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -252,8 +258,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql-version}</version>
 		</dependency>
-
-
+		<dependency>
+		    <groupId>org.mariadb.jdbc</groupId>
+		    <artifactId>mariadb-java-client</artifactId>
+		    <version>2.6.1</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

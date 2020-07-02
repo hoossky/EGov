@@ -8,7 +8,7 @@ import com.bit.web.domains.User;
 @Repository
 public interface UserMapper {
 	public void insertUser(User user);
-	public User selectUserByIdPw(User user);
+	public User selectByUseridAndPassword(User user);
 	public int existId(String userid);
 	public int countUsers();
 	public void createDB(HashMap<String, String> paramMap);

@@ -8,13 +8,13 @@ import com.bit.web.domains.User;
 
 @Component
 public interface UserService {
-	public void save();
+	 public void save();
 	 public void update();
 	 public void findOne();
 	 public void findAll();	
 	 public void count();
 	 public void delete();
-	 public void findByEmailAndUserId(String email, String userId);
+	 public User findByUserIdAndPassword(User user);
 	 public void findByEmailOrUserId(String email, String userId);
 	 public void findByCreatedAtBetween(Date fromDate, Date toDate);
 	 public void findByAgeGraterThanEqual(int age);

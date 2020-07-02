@@ -29,6 +29,7 @@ user = (function(){
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
 				alert(res)
+				location.href = _+`/location/main/Home`
 			},
 			error: function(err){
 				alert(err)

@@ -2,25 +2,24 @@
 	pageEncoding="UTF-8"%>
 <form action="action_page.php" style="border:1px solid #ccc">
   <div class="container">
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
+    <h1>Login</h1>    
     <hr>
     <label for="email"><b>userId</b></label>
     <input type="text" placeholder="Enter USERID" name="userId" required>
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button id="signup_btn" type="submit" class="signupbtn">Sign Up</button>
+      <button id="toHome" type="button" class="cancelbtn">Home</button>
+      <button id="login_btn" type="submit" class="signupbtn">Login</button>
     </div>
   </div>
 </form>
-<script src="${js}/store/user.js"></script>
+<script src="${javascript}/store/user.js"></script>
 <script>
-document.getElementById('signup_btn').addEventListener('click',function(e){
+document.getElementById('login_btn').addEventListener('click',function(e){
 	e.preventDefault()
 	user.init()
-	user.join({"userid": document.getElementById('userid').value,
+	user.login({"userid": document.getElementById('userid').value,
         		"password": document.getElementById('password').value})
 })
 </script>
