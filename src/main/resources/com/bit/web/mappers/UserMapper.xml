@@ -14,4 +14,8 @@
   	resultType="com.bit.web.domains.User" 
   	parameterType="com.bit.web.domains.User">  	
   </select> 
+  <select id="selectAll"
+  	resultType="com.bit.web.domains.User"
+  	parameterType="com.bit.web.domains.User">  	
+  </select>
 </mapper>
